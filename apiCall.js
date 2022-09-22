@@ -1,16 +1,17 @@
 var http = require("http");
-var options = { 
-  hostname : "environment.data.gov.uk", 
-  port : 443, 
-  path :"flood-monitoring/id/floods", 
-  method : "GET"
-}
 // var options = { 
-//   hostname : "www.ywonline.co.uk", 
-//   port : 80, 
-//   path :"/web/newincid.nsf/incidentsjson", 
+//   hostname : "environment.data.gov.uk", 
+//   port : 443, 
+//   path :"flood-monitoring/id/floods", 
 //   method : "GET"
 // }
+var options = { 
+  hostname : "www.ywonline.co.uk", 
+  port : 80, 
+  path :"/web/newincid.nsf/incidentsjson", 
+  method : "GET"
+}
+
 var req = http.request(options, function(res){
       console.log(`Server ${res.statusCode}`);
      var myData = ""; res.on("data", function(chunk){ 

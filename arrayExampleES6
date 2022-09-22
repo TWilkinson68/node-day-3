@@ -1,2 +1,4 @@
 var myArray = ['Bob','Fred','Jane','Helen'];
-console.log(`Hello ${myArray[0]}, how are you?`);
+myArray.forEach(element => 
+    console.log(`Hello ${element}, how are you?`));
+    
